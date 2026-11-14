@@ -18,11 +18,16 @@ CREATE TABLE IF NOT EXISTS employees(
 
 connection.commit()
 
-# Insert first employee
+
 cursor.execute('''
-INSERT INTO employees (name, position, departament, salary)
-VALUES (?, ?, ?, ?)
+    insert into employees (name, position, departament, salary)
+    values (?, ?, ?, ?)
 ''', ('John Doe', 'Software Engineer', 'Tech', 3000.50))
+# Insert first employee
+# cursor.execute('''
+# INSERT INTO employees (name, position, departament, salary)
+# VALUES (?, ?, ?, ?)
+# ''', ('John Doe', 'Software Engineer', 'Tech', 3000.50))
 
 # Insert second employee
 cursor.execute('''
